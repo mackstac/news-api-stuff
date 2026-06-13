@@ -5,7 +5,7 @@ from datetime import datetime
 # ----------------------------
 # CONFIGURATION
 # ----------------------------
-API_KEY = "60d3e70fdd074658a6a674f8ade0c4ef"
+API_KEY = st.secrets["API_KEY"]
 BASE_URL = "https://newsapi.org/v2/top-headlines"
 
 st.set_page_config(
@@ -26,9 +26,9 @@ st.markdown("Fetch and explore the latest headlines from around the world.")
 st.sidebar.header("News Filters")
 
 country_options = {
-    "Singapore": "sg",
-    "India": "in",
     "United States": "us",
+    "India": "in",
+    "Singapore": "sg",
     "United Kingdom": "gb",
     "Australia": "au",
     "Canada": "ca",
